@@ -7,7 +7,7 @@ os:
 
 
 install:
-  - ./scripts/dev_setup.sh
+  - yes | ./scripts/dev_setup.sh
   
 script:
   - cargo build
