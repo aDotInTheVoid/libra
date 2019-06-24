@@ -9,6 +9,8 @@ os:
 install:
   - yes | ./scripts/dev_setup.sh
   
+before_script:
+  - source $HOME/.cargo/env
 script:
   - cargo build
   - cargo test
