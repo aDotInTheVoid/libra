@@ -1,0 +1,14 @@
+language: generic
+sudo: true
+os:
+  - linux
+  - osx
+
+
+
+install:
+  - ./scripts/dev_setup.sh
+  
+script:
+  - cargo build
+  - cargo test
