@@ -3,7 +3,8 @@ sudo: true
 os:
   - linux
   - osx
-
+env:
+  - RUST_BACKTRACE=1 
 
 
 install:
@@ -12,5 +13,6 @@ install:
 before_script:
   - source $HOME/.cargo/env
 script:
-  - cargo build
-  - cargo test
+  - cargo build -j 16 --all --all-targets
+  - cargo test --all --exclude testsuite
+  - cargo test --package testsuite
